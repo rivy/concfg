@@ -105,7 +105,7 @@ function Get-PresetJson($src) {
     }
 
     # local preset file path
-    if ((Test-Path $src) -and $src.EndsWith('.json')) {
+    if (Test-Path $src) {
         return Get-Content $src -Raw
     }
 
